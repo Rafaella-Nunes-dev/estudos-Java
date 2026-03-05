@@ -4,6 +4,8 @@
  */
 package pkg05_03;
 
+import java.util.Scanner;
+
 /**
  *Crie uma classe pessoa, coloque os seguintes atributos: nome, idade, salario.
 Leia os dados da pessoa, popule o objeto com estes dados.
@@ -16,7 +18,9 @@ public class Pessoa {
     int idade;
     double salario;
     
-    void imprimir(String nome, int idade, double salario)
+    
+    
+    void imprimir()
     {
         System.out.println(nome);
         System.out.println(idade);
