@@ -33,6 +33,9 @@ public class MenuInfinito {
     /**
      * @param args the command line arguments
      */
+  
+   
+    
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         
@@ -40,6 +43,7 @@ public class MenuInfinito {
         
         while(Menu !=9)
         {
+            
             System.out.println("SEJA BEM VINDO AO PROGRAMA");
             System.out.println("ESCOLHA SUA OPCAO:");
             System.out.println("1 - Criar uma Pessoa (nome, salario e nascimento)\n" +
@@ -60,6 +64,16 @@ public class MenuInfinito {
                 System.out.println("OBRIGADA POR ESCOLHER PROGRAMA...");
             else if(Menu ==1){
                 System.out.println("1 - Criar uma Pessoa (nome, salario e nascimento)\n");
+                Pessoa p1 = new Pessoa();
+                System.out.println("Informe o nome: ");
+                p1.nome = s.nextLine();
+                System.out.println("Informe o salario: ");
+                p1.salario = Double.parseDouble(s.nextLine());
+                System.out.println("Informe o dia do nascimento: ");
+                p1.dia = Integer.parseInt(s.nextLine());
+                System.out.println("Informe o mês do nascimento: ");
+                p1.mes = Integer.parseInt(s.nextLine());
+                p1.ano = Integer.parseInt(s.nextLine());
             }
             else if(Menu ==2){
                 System.out.println("2 - Exibir a Pessoa\n");
