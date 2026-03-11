@@ -19,7 +19,7 @@ public class AJOptionPane {
         
         p2.idade = Integer.parseInt(JOptionPane.showInputDialog("Qual sua idade? "));
         
-        p2.salario = Double.parseDouble(JOptionPane.showInputDialog("Qual sua idade? "));
+        p2.salario = Double.parseDouble(JOptionPane.showInputDialog("Qual seu Salário? "));
         
         p2.imprimir();
     }
