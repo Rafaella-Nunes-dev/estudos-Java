@@ -73,9 +73,14 @@ Imprimir todos os funcionários com toString.
         empresa.adiciona(f3);
         empresa.adiciona(f4);
         
-        
+        for (int i = 0; i < empresa.empregados.length; i++) {
+            if()
+            String arg = args[i];
+            
+        }
         
         for (Funcionario e : empresa.empregados) {
+            if(empresa.empregados)
             System.out.println(e.toString());
         }
         
