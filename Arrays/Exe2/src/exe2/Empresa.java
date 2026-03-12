@@ -10,5 +10,19 @@ package exe2;
  * @author Aluno
  */
 public class Empresa {
-    
+    String nome;
+    String cnpj;
+    Funcionario [] empregados;
+     
+    boolean adiciona(Funcionario f) {
+        for (int i = 0; i < empregados.length; i++) {
+            if (empregados[i] == null) {
+                empregados[i] = f;
+                return true;
+            }
+        }
+        
+        return false;
+    }
 }
+
