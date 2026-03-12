@@ -40,7 +40,8 @@ public class MenuInfinito {
         Scanner s = new Scanner(System.in);
         
         int Menu =0;
-        
+        Pessoa p1 = new Pessoa();
+        Paciente paciente1 = new Paciente();
         while(Menu !=9)
         {
             
@@ -60,38 +61,70 @@ public class MenuInfinito {
             System.out.println("ESCOLHA SUA OPCAO: ");
             Menu = Integer.parseInt(s.nextLine());
             
+
+            
             if(Menu == 9)
                 System.out.println("OBRIGADA POR ESCOLHER PROGRAMA...");
             else if(Menu ==1){
                 System.out.println("1 - Criar uma Pessoa (nome, salario e nascimento)\n");
-                Pessoa p1 = new Pessoa();
+                
                 System.out.println("Informe o nome: ");
                 p1.nome = s.nextLine();
                 System.out.println("Informe o salario: ");
                 p1.salario = Double.parseDouble(s.nextLine());
-                System.out.println("Informe o dia do nascimento: ");
-                p1.dia = Integer.parseInt(s.nextLine());
-                System.out.println("Informe o mês do nascimento: ");
-                p1.mes = Integer.parseInt(s.nextLine());
-                p1.ano = Integer.parseInt(s.nextLine());
+                System.out.println("Informe a data do nascimento: ");
+                p1.nascimento = s.nextLine();
+               
             }
             else if(Menu ==2){
                 System.out.println("2 - Exibir a Pessoa\n");
+                
+                if(p1 == null || p1.nome == null)
+                    System.out.println("Pessoa não criada");
+                else
+                    System.out.println(p1.toString());
             }
             else if(Menu ==3){
                 System.out.println("3 - Destruir a Pessoa\n");
+                if(p1.nome == null )
+                    System.out.println("Pessoa não existe");
+                else
+                {
+                    p1.Deletar();
+                    System.out.println("Pessoa deletada");
+                }
             }
             else if(Menu ==4){
                 System.out.println("4 - Criar um Paciente (nome, peso, altura)");
+                
+                System.out.println("Informe o nome: ");
+                paciente1.nome = s.nextLine();
+                
+                System.out.println("Informe a altura: ");
+                paciente1.altura = Double.parseDouble(s.nextLine());
+                
+                System.out.println("Informe o peso: ");
+                paciente1.peso = Double.parseDouble(s.nextLine());
             }
             else if(Menu ==5){
                 System.out.println("5 - Exibir o Paciente\n\n");
+                
+                if(paciente1 == null || paciente1.nome ==null)
+                    System.out.println("Paciente não existe");
+                else
+                    System.out.println(paciente1.toString());
             }
             else if(Menu ==6){
                 System.out.println("6 - Exibe o IMC do Paciente (peso /altura^2)\n");
+                paciente1.QualIMC();
             }
             else if(Menu ==7){
                 System.out.println("7 - Destruir o Paciente\n");
+                
+                if(paciente1.nome == null)
+                    System.out.println("Paciente não existe");
+                else
+                    paciente1.Deletar();
             }
             else if(Menu ==8){
                 System.out.println("8 - Exibe a idade que a Pessoa fará em 2026\n");

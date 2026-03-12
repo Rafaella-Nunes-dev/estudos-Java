@@ -11,15 +11,14 @@ package menuinfinito;
 public class Pessoa {
     String nome;
     double salario;
-    int dia;
-    int mes;
-    int ano;
-    
-    void Mostrar(){
-        System.out.println(nome);
-        System.out.println(salario);
-        System.out.println(dia+"/" + mes +"/"+ ano);
+    String nascimento;
+
+    @Override
+    public String toString() {
+        return "Pessoa{" + "nome=" + nome + ", salario=" + salario + ", nascimento=" + nascimento + '}';
     }
+    
+    
     
     Pessoa Deletar(){
         return null;

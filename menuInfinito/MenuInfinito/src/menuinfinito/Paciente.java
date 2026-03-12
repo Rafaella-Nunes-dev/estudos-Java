@@ -12,13 +12,10 @@ public class Paciente {
     String nome;
     double altura;
     double peso;
-    
-    
-    void Mostrar()
-    {
-        System.out.println(nome);
-        System.out.println(altura);
-        System.out.println(peso);
+
+    @Override
+    public String toString() {
+        return "Paciente{" + "nome=" + nome + ", altura=" + altura + ", peso=" + peso + '}';
     }
     
     double CalcularIMC()
@@ -28,8 +25,9 @@ public class Paciente {
         return IMC;
     }
     
-    String QualIMC(double IMC)
+    String QualIMC()
     {
+        double IMC = CalcularIMC();
         if(IMC<20){
             return "Magro";
         } else if(IMC >20 && IMC <24){
